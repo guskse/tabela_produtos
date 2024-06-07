@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" sizes="64x64" href="calculator.png" />
+    <title>Tabela Produtos</title>
+  </head>
+  <body>
+    <div class="printableDiv">
+      <table id="products-table">
+        <tr class="table-header">
+          <th>Produto</th>
+          <th>Codigo UN</th>
+          <th>Codigo CX</th>
+          <th>Codigo KG</th>
+          <th>PESO (kg)</th>
+          <th>PREÇO (kg)</th>
+        </tr>
+      </table>
+    </div>
+
+    <div class="btn-div">
+      <button id="printBtn" type="submit">Imprimir Tabela</button>
+      <button id="clearBtn" type="submit">Limpar Tabela</button>
+    </div>
+
+    <div class="forms-div">
+      <form id="addProductForm" autocomplete="off">
+        <h2>Adicionar Produto</h2>
+        <label for="fruitName">Nome do Produto:</label>
+        <input
+          type="text"
+          id="fruitName"
+          name="fruitName"
+          maxlength="40"
+          required
+        /><br />
+
+        <label for="fruitCodeUN">Codigo UN:</label>
+        <input
+          type="number"
+          id="fruitCodeUN"
+          name="fruitCodeUN"
+          required
+          min="0"
+        /><br />
+
+        <label for="fruitCodeCX">Codigo CX:</label>
+        <input
+          type="number"
+          id="fruitCodeCX"
+          name="fruitCodeCX"
+          required
+          min="0"
+        /><br />
+
+        <label for="fruitCodeKG">Codigo KG:</label>
+        <input
+          type="number"
+          id="fruitCodeKG"
+          name="fruitCodeKG"
+          required
+          min="0"
+        /><br />
+
+        <label for="fruitWeight">Peso (kg):</label>
+        <input
+          type="number"
+          id="fruitWeight"
+          name="fruitWeight"
+          required
+          min="0"
+          step="0.01"
+        /><br />
+
+        <label for="fruitPrice">Preço por kilo:</label>
+        <input
+          type="number"
+          id="fruitPrice"
+          name="fruitPrice"
+          required
+          min="0"
+          step="0.01"
+          placeholder="Preço/Kg"
+        /><br />
+
+        <button type="submit">Adicionar</button>
+      </form>
+
+      <form id="addProductForm" class="form-md convert-form" autocomplete="off">
+        <h2>Converter Pedido de Compra por KG</h2>
+        <label for="peso">PESO POR CAIXA (KG):</label>
+        <input
+          type="number"
+          id="peso"
+          name="peso"
+          maxlength="40"
+          step="0.01"
+          min="0"
+          required
+        /><br />
+
+        <label for="preco">PREÇO POR UNIDADE (R$):</label>
+        <input
+          type="number"
+          id="preco"
+          name="preco"
+          step="0.01"
+          min="0"
+          required
+        /><br />
+
+        <label for="qtd">QUANTIDADE PEDIDO (KG):</label>
+        <input
+          type="number"
+          id="qtd"
+          name="qtd"
+          maxlength="40"
+          min="0"
+          required
+        /><br />
+
+        <h4>Valor Total: R$ <span id="total-conversao">0</span></h4>
+
+        <button type="submit" id="transformBtn">Transformar</button>
+      </form>
+    </div>
+
+    <footer>
+      <h3>Gustavo Carvalho - 2024</h3>
+    </footer>
+
+    <script src="./script.js" type="text/javascript"></script>
+  </body>
+</html>
